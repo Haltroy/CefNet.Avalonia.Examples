@@ -1,0 +1,58 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        xmlns:cefnet="clr-namespace:CefNet.Avalonia;assembly=CefNet.Avalonia"
+        x:Class="AvaloniaApp.MainWindow"
+        cefnet:WebView.TextFound="WebView_TextFound"
+        Title="AvaloniaApp">
+
+  <Window.Styles>
+    <Style Selector="TabControl">
+      <Setter Property="Background" Value="#FFFFFF"/>
+    </Style>
+    <Style Selector="TabControl WrapPanel">
+      <Setter Property="Background" Value="#F0F0F0"/>
+    </Style>
+
+    <Style Selector="TabItem">
+      <Setter Property="VerticalAlignment" Value="Center"/>
+      <Setter Property="Background" Value="#F0F0F0"/>
+      <Setter Property="Foreground" Value="#000000"/>
+      <Setter Property="FontSize" Value="12"/>
+    </Style>
+    <Style Selector="TabItem:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+      <Setter Property="Background" Value="#E0E0E0"/>
+    </Style>
+    
+    <Style Selector="TabItem:selected">
+      <Setter Property="Background" Value="#FFFFFF"/>
+    </Style>
+    <Style Selector="TabItem:selected /template/ ContentPresenter#PART_ContentPresenter">
+      <Setter Property="Background" Value="#FFFFFF"/>
+    </Style>
+  </Window.Styles>
+
+  <DockPanel>
+    <Menu VerticalAlignment="Top" DockPanel.Dock="Top" Name="menu">
+      <MenuItem Header="File">
+        <MenuItem Header="Add Tab" Click="AddTab_Click" />
+        <MenuItem Header="Find i" Click="Find_Click" />
+        <MenuItem Header="Tests">
+          <MenuItem Header="Open unhandled popup" Click="OpenPopup_Click" />
+          <MenuItem Header="Test CefV8Value types" Click="TestV8ValueTypes_Click" />
+          <MenuItem Header="Alert" Click="Alert_Click" />
+        </MenuItem>
+      </MenuItem>
+    </Menu>
+    <DockPanel DockPanel.Dock="Top" Name="controlsPanel">
+      <Button Content=" &lt; " Margin="2,2,0,0" />
+      <Button Content=" &gt; " Margin="2,2,0,0" />
+      <Button Content="Go" Margin="2,2,0,0" Click="NavigateButton_Click"/>
+      <TextBox Name="txtAddress" Margin="2,2,0,0" KeyDown="txtAddress_KeyDown" />
+    </DockPanel>
+    <TabControl Name="tabs" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Padding="0">
+    </TabControl>
+  </DockPanel>
+</Window>

@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CefNet.Avalonia.Example", "CefNet.Avalonia.Example\CefNet.Avalonia.Example.csproj", "{C132241F-D2E3-45CE-85DD-1FA91BEE4E3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CefNet.AvaloniaMVVM.Example", "CefNet.AvaloniaMVVM.Example\CefNet.AvaloniaMVVM.Example.csproj", "{FA00B56E-FCA3-428F-A4E9-DE18DE7E48D9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C132241F-D2E3-45CE-85DD-1FA91BEE4E3B}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{C132241F-D2E3-45CE-85DD-1FA91BEE4E3B}.Debug|Any CPU.Build.0 = Debug|x86
+		{C132241F-D2E3-45CE-85DD-1FA91BEE4E3B}.Release|Any CPU.ActiveCfg = Release|x86
+		{C132241F-D2E3-45CE-85DD-1FA91BEE4E3B}.Release|Any CPU.Build.0 = Release|x86
+		{FA00B56E-FCA3-428F-A4E9-DE18DE7E48D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA00B56E-FCA3-428F-A4E9-DE18DE7E48D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA00B56E-FCA3-428F-A4E9-DE18DE7E48D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA00B56E-FCA3-428F-A4E9-DE18DE7E48D9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
