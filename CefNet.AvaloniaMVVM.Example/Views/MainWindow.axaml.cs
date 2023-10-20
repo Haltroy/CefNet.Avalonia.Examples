@@ -1,5 +1,4 @@
 using Avalonia.Controls;
-using CefNet;
 using CefNet.Avalonia;
 
 namespace CefTest.Views;
@@ -10,7 +9,7 @@ public partial class MainWindow : Window
     {
         InitializeComponent();
 
-        WebView webview = new();
+        WebView webview = new() { Focusable = true };
         Content = webview;
 
         webview.BrowserCreated += (s, e) => webview.Navigate("https://google.com");
