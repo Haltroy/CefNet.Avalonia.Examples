@@ -1,5 +1,11 @@
 # CefNet.Avalonia.Examples
 
+## IMPORTANT
+
+The CefNet is no longer maintained and also gone. If you want a cross-platform CEF binding for .NET and AvaloniaUI, check out [CefGllue](https://github.com/OutSystems/CefGlue) (or [WebView](https://github.com/OutSystems/WebView)) instead. This is for archival purposes only.
+
+## Original Description
+
 This repository contains 2 examples.
 
  - CefNet.Avalonia.Example: The one used in the CefNet repository, but project references are replaced with package references.
@@ -18,9 +24,9 @@ Current CEF Version: `105.3.18+gbfea4e1+chromium-105.0.5195.52`
      - [Linux ARM 64](https://cef-builds.spotifycdn.com/cef_binary_105.3.18%2Bgbfea4e1%2Bchromium-105.0.5195.52_linuxarm64_beta_client.tar.bz2)
      - [MacOS 64-bit Intel/AMD](https://cef-builds.spotifycdn.com/cef_binary_105.3.18%2Bgbfea4e1%2Bchromium-105.0.5195.52_macosx64_beta_client.tar.bz2)
      - [MacOS ARM](https://cef-builds.spotifycdn.com/cef_binary_105.3.18%2Bgbfea4e1%2Bchromium-105.0.5195.52_macosarm64_beta_client.tar.bz2)
-     - Fun fact: All these should have their own `cefclient` application. You can test if CEF is working by running the application. If it crashes than re-download it.
+     - Note: All these binaries should have their own `cefclient` application. You can test if CEF is working by running the application.
 2. Extract them to `[your home folder]/.cefnet`. The `.cefnet` folder should contain a `Release` folder.
-     - These files are all TAR files, use 7-Zip or equivalent program (for Windows) or `tar xf [downloaded file] -C ~/.cefnet` command (for the rest) to extract them.
+     - These files are all TAR files, use 7-Zip or equivalent program (for Windows) or `tar xf [downloaded file] -C ~/.cefnet` command (for Unix-like systems) or GUI programs like Ark (Linux) to extract them.
 3. Run any one of the examples by running `dotnet run` command.
      ```bash
         git clone https://github.com/haltroy/CefNet.Avalonia.Examples.git
@@ -33,10 +39,13 @@ Current CEF Version: `105.3.18+gbfea4e1+chromium-105.0.5195.52`
 
 ## Known Issues
 
+Some of these solutions should work. If it doesn't then god bless you since CefNet is now abandoned.
+
 1. Issue: `System.DllNotFoundException: Can't load [some path]/libcef.so`
     - Solution: `export LD_PRELOAD=[that path]/libcef.so:$LD_PRELOAD`
 2. Issue: `System.DllNotFoundException: Unable to load shared library 'libdl'`
     - Solution 1: `sudo ln -sf /usr/lib64/$(ls /usr/lib64/ | grep libdl.so) /usr/lib64/libdl.so`
     - Solution 2: `whereis libdl.so.2` -> `sudo ln -sf <your_libdl.so.2_path> /usr/lib/libdl.so`
     - Solution 3: Install GNU C libraries for your Linux distro.
-    - Note: All solutions should work.
+  
+ 
